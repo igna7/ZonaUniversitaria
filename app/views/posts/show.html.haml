@@ -1,0 +1,60 @@
+#post_show
+	%h1= @post.title
+	%p.username
+		Escrito por
+		= @post.user.name
+		hace
+		= time_ago_in_words(@post.created_at)
+	.clearfix
+		.post_image_description
+			= image_tag @post.image.url(:medium)
+			.description= simple_format(@post.description)
+			%p.share
+				Compartir 
+				= social_share_button_tag(@post.title, :popup => "true")
+		.post_data
+			= link_to like_post_path(@post), method: :get, class: "data" do
+				%i.fa.fa-thumbs-o-up
+				= pluralize(@post.get_upvotes.size, "Me gusta")
+			= link_to dislike_post_path(@post), method: :get, class: "data" do
+				%i.fa.fa-thumbs-o-down
+				= pluralize(@post.get_downvotes.size, "No me gusta")
+			%p.data
+				%i.fa.fa-comments-o
+				= pluralize(@post.comments.count, "Comentario")
+			- if @post.user == current_user
+				= link_to "Editar", edit_post_path(@post), class: "data"
+				= link_to "Eliminar", post_path, method: :delete, confirm: '¿Estas seguro?', class: "data"
+			%p.share
+				Compartir 
+				= social_share_button_tag(@post.title, :popup => "true")
+		#random_post
+			%h3 Inspiración aleatoria
+			.post
+				.post_image
+					= link_to (image_tag @random_post.image.url(:medium)), post_path(@random_post)
+				.post_content
+					.title
+						%h2= link_to @random_post.title, post_path(@random_post)
+					.data.clearfix
+						%p.username
+							Escrito por
+							= @random_post.user.name
+						%p.buttons
+							%span
+								%i.fa.fa-comments-o
+								= @random_post.comments.count
+							%span
+								%i.fa.fa-thumbs-o-up
+								= @random_post.get_likes.size
+
+#comments
+	%h2.comment_count= pluralize(@post.comments.count, "Comentario")
+	- @comments.each do |comment|
+		.comment
+			%p.username= comment.user.name
+			%p.content= comment.content
+
+
+
+	= render "comments/form"

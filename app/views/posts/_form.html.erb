@@ -1,0 +1,20 @@
+<section class="publica-form">
+                <div class="panel-heading">
+                        <%= simple_form_for @post do |f| %>
+                            <div class = "span3">
+                            <%= f.input :image, :label => "Imagen:", required: true, autofocus: true, :class=>"imagen" %>
+                            </div>
+                            <div class = "span3">
+                            <%= f.input :title, :label => "Titulo:", required: true, :class => "title-control"  %>
+                            </div>
+                            <div class = "span3">
+                            <%= f.collection_select :category_id, Category.find(:all), :id, :name, :prompt => "Select a Category" %>
+                            </div>
+                            <div class = "span3" type="text"> 
+                            <%= f.input  :description,:label=>"Descripcion",required: true, :class => "texto"%>
+                            </div>
+                            <div class="form-actions">
+                              <%= f.button :submit, "Publicar" , :class => "boton"%>
+                            </div>
+                        <% end %>
+</section>

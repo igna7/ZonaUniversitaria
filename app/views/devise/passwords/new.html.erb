@@ -1,0 +1,20 @@
+<section class="container">
+        <section class="login-form">
+            <div class="panel panel-default">
+                        <div class="titulo"><h1>¿Olvidaste tu contraseña?</h1></div>
+                <div class="panel-heading">
+                        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  						<%= f.error_notification %>
+                            <div class = "span3">
+                            <%= f.input :email, :label => "Email:", required: true, autofocus: true, :class => "form-control" %>
+                            </div>
+                            <div class="form-actions">
+                            	<%= f.button :submit, "Restablecer contraseña", :class => "boton" %>
+                            </div>
+                        <% end %>
+                </div>
+                <div class="panel-footer" align="center">
+                    <h2><%= render "devise/shared/links" %></h2>
+                    </div>
+        </section>
+    </section>  

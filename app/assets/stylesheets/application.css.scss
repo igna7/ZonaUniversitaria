@@ -1,0 +1,80 @@
+/*
+ *= require_self
+ */
+
+body {
+	font-family: "Proxima Nova";
+	font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.boton {
+	border: 1px solid black;
+	padding: .5rem 1rem;
+	border-radius: .3rem;
+	outline: none;
+	color: white;
+	background: black;
+}
+
+header {
+	width: 100%;
+	padding: 1rem;
+	border-bottom: 1px solid #E4E4E4;
+
+	#logo {
+		height: 0px;
+		float: left;
+		text-align: center;
+		font-size: 1.5rem;
+		a {
+			color: black;
+			text-decoration: none;
+			&:hover {
+				color: black;
+			}
+		}
+	}
+	nav {
+		float: right;
+		a {
+			margin-left: 1.5rem;
+			line-height: 2;
+			color: black;
+			text-decoration: none;
+			&:hover {
+				color: #black;
+			}
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	color: #969696;
+}
+
+
+@import 'home.css.scss';
+@import 'posts.css.scss';
+@import 'boxes.css.scss';
+@import 'editarperfil.css.scss';
+@import 'newpost.css.scss';
+@import "social-share-button";

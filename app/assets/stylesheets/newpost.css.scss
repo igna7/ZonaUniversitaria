@@ -1,0 +1,126 @@
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+
+.publica-form {
+	margin: 50px auto;
+	max-width: 800px;
+}
+
+	.publica-form > div {
+		text-align: center;
+		margin-top: 0px;
+	}
+	.publica-form > section {
+		font-size: 13px;
+		text-align: center;
+		margin-top: 10px;
+		color: #7f7f7f;
+	}
+		.publica-form > section a {
+			color: #08549b;
+		}
+
+.publica-form .panel {
+	background: white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #d8dce0;
+	-webkit-box-shadow: 0 0 5px 0 rgba( 150, 150, 150, .5 );
+	   -moz-box-shadow: 0 0 5px 0 rgba( 150, 150, 150, .5 );
+	        box-shadow: 0 0 5px 0 rgba( 150, 150, 150, .5 );
+}
+	.publica-form .panel .panel-heading {
+		padding: 25px 40px 20px 40px;
+		background: #CC9450;	
+	}
+
+	.publica-form .panel .panel-body {
+		color: black;
+	}
+	.publica-form .panel .panel-footer {
+		padding: 15px 40px 20px 40px;
+		background: #37A7A3;
+		color: black;
+	}
+	
+form[role=login] {
+	font: 14px/2.2em Lato, serif;
+	color: #8c8c8c;
+}	
+	form[role=login] input,
+	form[role=login] button {
+		font-size: 15px;
+		margin: 5px 0;
+	}
+	form[role=login] input {
+		size: 20px;
+		color: #00000;
+		background: #fff;
+		border: 1px solid #c3c5c8;
+	    border-radius: 0;
+	    -moz-border-radius: 0;
+	    -webkit-border-radius: 0;
+		box-shadow: none;
+	}
+	form[role=login] input.form-control {
+		height: 2em;
+		width: 80%;
+		margin: 8px;
+	    border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    -webkit-border-radius: 2px;
+		-webkit-box-shadow: inset 0 1px 2px 0 rgba( 150, 150, 150, .5 );
+		   -moz-box-shadow: inset 0 1px 2px 0 rgba( 150, 150, 150, .5 );
+		        box-shadow: inset 0 1px 2px 0 rgba( 150, 150, 150, .5 );
+	}
+		form[role=login] input::-webkit-input-placeholder {
+			color: #9e9f8a;
+		}
+		form[role=login] input:-moz-placeholder {
+			color: #9e9f8a;
+		}
+		form[role=login] input::-moz-placeholder {
+			color: #9e9f8a;
+		}
+		form[role=login] input:-ms-input-placeholder {  
+			color: #9e9f8a;
+		}
+	form[role=login] button {
+		line-height: 1.8em;
+	}
+	.titulo{
+		font-size: 20px;
+		color:black;
+		text-align: center;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	label{
+		color: black;
+		font-size: 20px;
+	}
+form[role=login] input [type="text"]{
+		min-width: 500px;
+		color: #00000;
+		background: #fff;
+		border: 1px solid #c3c5c8;
+	    border-radius: 0;
+	    -moz-border-radius: 0;
+	    -webkit-border-radius: 0;
+		box-shadow: none;
+	}
+
+input, textarea{
+	width: 100%;
+}
+input.texto, textarea {
+		height: 10em;
+		
+	}

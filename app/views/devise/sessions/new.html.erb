@@ -1,0 +1,27 @@
+    <section class="container">
+        <section class="login-form">
+            <div class="panel panel-default">
+                        <div class="titulo"><h1>Iniciar sesion</h1></div>
+                <div class="panel-heading">
+                        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                            <div class = "span3">
+                            <%= f.input :email, :label => "Email:", required: false, autofocus: true, :class => "form-control" %>
+                            </div>
+                            <div class = "span3">
+                            <%= f.input :password, :label => "Contraseña:", required: false, :class => "form-control" %>
+                            </div>
+                            <div class = "span3">
+                            <%= f.input :remember_me, :label => "Recordarme",:class => "form-control", as: :boolean if devise_mapping.rememberable? %>
+                            </div>
+                            <div class="form-actions">
+                              <%= f.button :submit, "Iniciar sesion" , :class => "boton"%>
+                            </div>
+                        <% end %>
+                </div>
+                <div class="panel-footer">
+                    <div class="link" align="center">
+                        <h2>¿Aun no tienes cuenta?</h2>
+                    <h2><%= render "devise/shared/links" %></h2>
+                    </div>  
+        </section>
+    </section>  
